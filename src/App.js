@@ -5,6 +5,7 @@ import Tester from "./Tester";
 import { HashRouter, Route, Routes,Link, BrowserRouter } from 'react-router-dom';
 import NavBar from './NavBar';
 import ResponsiveAppBar from './ResponsiveAppBar';
+import NFLSchedule from './NFLSchedule';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
         <Route path="/" element={<HomePage />}/>
+        <Route  path="/nfl" element={<NFLSchedule />} />
         <Route path="tester" element={<Tester />} />
         </Routes>
       
