@@ -56,6 +56,8 @@
 import React from 'react';
 import background1 from "./background1.jpg";
 import logo from "./logo.png"
+import sandboxImg from "./shreyasSandbox.png"
+import sandBox2 from "./shreyassandbox2-transformed.png"
 
 const HomePage = () => {
   const style = {
@@ -69,8 +71,8 @@ const HomePage = () => {
   return (
     
     <div style={style}>
-      {/* Your component content goes here */}
-      <img src="https://ibb.co/25BP9ct" alt="Description of image" />
+      {/* Your component content goes here 729 × 427*/}
+      <img src={sandBox2} alt="Description of image" style={{ width: '546.75px', height: '320.25px' }} />
         
     </div>
   );
