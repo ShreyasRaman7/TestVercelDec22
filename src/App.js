@@ -19,7 +19,6 @@ import WeatherComponent from './WeatherComponent';
 import ChatApp from './ChatApp';
 import TicTacToe from './TicTacToe';
 import { createMuiTheme } from '@material-ui/core/styles';
-import { Typography } from '@material-ui/core';
 import HomePage from './HomePage';
 import background1 from "./background1.jpg";
 import WeightedGradeCalculator from './WeightedGradeCalculator';
