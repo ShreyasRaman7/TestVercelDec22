@@ -4,12 +4,14 @@ import HomePage from './HomePage';
 import Tester from "./Tester";
 import { HashRouter, Route, Routes,Link, BrowserRouter } from 'react-router-dom';
 import NavBar from './NavBar';
+import ResponsiveAppBar from './ResponsiveAppBar';
 
 function App() {
 
   return (
      <div className="App"  >
       <header className="App-header" >
+        <ResponsiveAppBar/>
       <NavBar/>
       <BrowserRouter>
         <Routes>
