@@ -23,15 +23,22 @@ import background1 from "./background1.jpg";
 import WeightedGradeCalculator from './WeightedGradeCalculator';
 import PolynomialGraph from './PolynomialGraph';
 import { HashRouter } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  function toggleDarkMode() {
+    setDarkMode(!darkMode);
+  }
+  
+
   return (
-    
+    <div  className={darkMode ? 'dark-mode' : 'light-mode'}>
     <div className="App"  >
       <ResponsiveAppBar/>
-      <header className="App-header">
+      <header className={`App-header ${darkMode ? 'dark-mode' : 'light-mode'}`}>
       
       <BrowserRouter >
       <Routes>
@@ -53,7 +60,10 @@ function App() {
     </BrowserRouter>
       </header>
     </div>
+    </div>
   );
 }
 
 export default App;
+
+

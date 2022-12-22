@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 
 function ToDoList() {
   const [items, setItems] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
 
+
+  function toggleDarkMode() {
+    setDarkMode(!darkMode);
+  }
   const addItem = (e) => {
     e.preventDefault();
     setItems([...items, { id: Date.now(), text: e.target.item.value }]);
@@ -14,7 +19,7 @@ function ToDoList() {
   }
 
   return (
-    <div>
+    <div  className={darkMode ? 'dark-mode' : 'light-mode'}>
       <h1>To-Do List</h1>
       <form onSubmit={addItem}>
         <input name="item" />

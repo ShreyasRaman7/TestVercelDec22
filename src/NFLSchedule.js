@@ -3,6 +3,13 @@ import axios from 'axios';
 
 function NFLSchedule() {
   const [schedule, setSchedule] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
+
+
+  function toggleDarkMode() {
+    setDarkMode(!darkMode);
+  }
+  
 
   useEffect(() => {
     const options = {
@@ -22,7 +29,9 @@ function NFLSchedule() {
   }, []);
 
   return (
-    <table>
+    <div  className={darkMode ? 'dark-mode' : 'light-mode'}><button onClick={toggleDarkMode}>Toggle Dark Mode</button>
+    
+    <table >
       <thead>
         <tr>
         </tr>
@@ -39,6 +48,7 @@ function NFLSchedule() {
         ))}
       </tbody>
     </table>
+    </div>
   );
 }
 

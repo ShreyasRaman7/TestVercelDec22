@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 
 function ChatApp(props) {
   // State to store the login form data
-  const [loginForm, setLoginForm] = useState({ username: '' });
 
+  const [darkMode, setDarkMode] = useState(false);
+  const [loginForm, setLoginForm] = useState({ username: '' });
+  function toggleDarkMode() {
+    setDarkMode(!darkMode);
+  }
   // State to store the chat messages
   const [messages, setMessages] = useState([]);
 
@@ -38,6 +42,7 @@ function ChatApp(props) {
   };
 
   return (
+    <div  className={darkMode ? 'dark-mode' : 'light-mode'}>
     <div>
       {/* Login form */}
       <form onSubmit={handleLoginSubmit}>
@@ -73,6 +78,7 @@ function ChatApp(props) {
         />
         <button type="submit">Send</button>
       </form>
+    </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 /* .App-logo {
@@ -33,6 +34,21 @@
 
   
 }
+
+.dark-mode {
+  background-color: rgb(52, 52, 52);
+  color: white;
+  width: 100%;
+  height: 80%;
+}
+
+.light-mode {
+  background-color: #FCF5E5;
+  color: black;
+  width: 100%;
+  height: 80%;
+}
+
 .board-row {
   height: 60px; 
 }
@@ -47,7 +63,7 @@
 
 
 .App-header {
-  background-color: #282c34;
+  background-color: #a8acbc;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
