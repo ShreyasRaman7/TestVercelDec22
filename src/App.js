@@ -22,6 +22,7 @@ import HomePage from './HomePage';
 import background1 from "./background1.jpg";
 import WeightedGradeCalculator from './WeightedGradeCalculator';
 import PolynomialGraph from './PolynomialGraph';
+import HistoricalEventsList from './HistoricalEventsList';
 import { HashRouter } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
@@ -32,7 +33,14 @@ function App() {
   function toggleDarkMode() {
     setDarkMode(!darkMode);
   }
-  
+  const [month, setMonth] = useState(null);
+  const [day, setDay] = useState(null);
+
+  useEffect(() => {
+    const currentDate = new Date();
+    setMonth(currentDate.getMonth() + 1);
+    setDay(currentDate.getDate());
+  }, []);
 
   return (
     <div  className={darkMode ? 'dark-mode' : 'light-mode'}>
@@ -54,7 +62,9 @@ function App() {
         <Route path="/Tictactoe" element={<TicTacToe />} />
         <Route path="/gradeCalculator" element={<WeightedGradeCalculator />} />
         <Route path="/graph" element={<PolynomialGraph />} />
+        <Route path="/historytoday" element={<HistoricalEventsList month={month} day={day}  />} />
         <Route path="/" element={<HomePage />} />
+        
 
       </Routes>
     </BrowserRouter>
