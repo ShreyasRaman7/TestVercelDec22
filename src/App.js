@@ -24,6 +24,8 @@ import WeightedGradeCalculator from './WeightedGradeCalculator';
 import PolynomialGraph from './PolynomialGraph';
 import HistoricalEventsList from './HistoricalEventsList';
 import NutritionSearch from './NutritionSearch';
+import FlashcardDeck from './FlashcardDeck';
+
 import { HashRouter } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
@@ -66,6 +68,8 @@ function App() {
         {/* {console.log("month: ",month1,"day:",day1)} */}
         <Route path="/historytoday" element={<HistoricalEventsList month={month1} day={day1}  />} />
         <Route path="/nutrition" element={<NutritionSearch />} />
+        <Route path="/FlashcardDeck" element={<FlashcardDeck />} />
+
         <Route path="/" element={<HomePage />} />
         
 
