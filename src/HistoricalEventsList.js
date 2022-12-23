@@ -18,7 +18,9 @@ function HistoricalEventsList(props) {
         const response = await fetch(`https://api.api-ninjas.com/v1/historicalevents?month=${props.month}&day=${props.day}`, {
           headers: { 'X-Api-Key': 'H4XHh4Z5ISHWmHZnmc/xeg==pSgMVBIJY3ih9m7w' },
         });
+         
          data = await response.json();
+         console.log("response:",response); 
         setEvents(data.map((event, index) => {
             return {
               id: index,

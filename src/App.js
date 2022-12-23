@@ -33,13 +33,13 @@ function App() {
   function toggleDarkMode() {
     setDarkMode(!darkMode);
   }
-  const [month, setMonth] = useState(null);
-  const [day, setDay] = useState(null);
+  const [month1, setMonth1] = useState(null);
+  const [day1, setDay1] = useState(null);
 
   useEffect(() => {
     const currentDate = new Date();
-    setMonth(currentDate.getMonth() + 1);
-    setDay(currentDate.getDate());
+    setMonth1(currentDate.getMonth() + 1);
+    setDay1(currentDate.getDate());
   }, []);
 
   return (
@@ -62,7 +62,8 @@ function App() {
         <Route path="/Tictactoe" element={<TicTacToe />} />
         <Route path="/gradeCalculator" element={<WeightedGradeCalculator />} />
         <Route path="/graph" element={<PolynomialGraph />} />
-        <Route path="/historytoday" element={<HistoricalEventsList month={month} day={day}  />} />
+        {console.log("month: ",month1,"day:",day1)}
+        <Route path="/historytoday" element={<HistoricalEventsList month={12} day={22}  />} />
         <Route path="/" element={<HomePage />} />
         
 
