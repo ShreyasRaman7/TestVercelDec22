@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import HomeIcon from'@mui/icons-material/Home';
 import { Link} from "react-router-dom"
 const pages = ['SoccerHome', 'NFL', 'LiveSoccer'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -37,10 +38,17 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
+      <Container maxWidth="xl"> 
+        <Toolbar disableGutters style={{ justifyContent: 'space-between' }}>
+          {/* <HomeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+          {/* <IconButton sx={{ backgroundImage:"linear-gradient(to right, silver ,turquoise, gold)", color: 'purple'}} variant='outlined' href='/' aria-label="Home">
+  <HomeIcon sx={{ color: 'white' }} /> Home
+</IconButton> */}
+{/* <Button sx={{ backgroundImage:"linear-gradient(to right, red , yellow)", color: 'white', paddingRight: '20px'}} href="/" variant="contained" >
+  <HomeIcon/>
+      </Button> */}
+          {/* <Typogr
+          {/* <Typography
             variant="h6"
             noWrap
             component="a"
@@ -56,7 +64,28 @@ function ResponsiveAppBar() {
             }}
           >
             HOME
+          </Typography> */}
+
+        <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              background: "radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(148,70,252,1) 100%)",
+              border: "2px solid white",
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            ⌂HOME
           </Typography>
+
 
           <Typography
             variant="h6"
@@ -252,12 +281,12 @@ function ResponsiveAppBar() {
               background: "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)",
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.01rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-           Today in History
+           HistoryToday
           </Typography>
 
 
@@ -319,73 +348,7 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
          
-          {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box> */}
-         {/* <Box sx={{ padding: 0 }}>
-                    <Link to='/login/'>
-                        <Button variant="contained" sx={{ fontSize: 18, backgroundColor: 'periwinkle' }}>
-                            Login
-                        </Button>
-                    </Link>
-
-                </Box>
-
-
-                <Box>
-                    <Link to='/allLists/' >
-                        <Button variant="contained" sx={{ fontSize: 18, backgroundColor: 'periwinkle' }}>
-                            Continue as Guest
-                        </Button>
-                    </Link>
-                </Box>
-
-
-                <Box>
-                    <Link to='/register/'>
-                        <Button variant="contained" sx={{ fontSize: 18, backgroundColor: 'periwinkle' }}>
-                            Create Account
-                        </Button>
-                    </Link>
-                </Box> */}
-
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
+          
         </Toolbar>
       </Container>
     </AppBar>

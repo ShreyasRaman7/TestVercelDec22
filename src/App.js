@@ -63,7 +63,7 @@ function App() {
         <Route path="/gradeCalculator" element={<WeightedGradeCalculator />} />
         <Route path="/graph" element={<PolynomialGraph />} />
         {console.log("month: ",month1,"day:",day1)}
-        <Route path="/historytoday" element={<HistoricalEventsList month={12} day={22}  />} />
+        <Route path="/historytoday" element={<HistoricalEventsList month={month1} day={day1}  />} />
         <Route path="/" element={<HomePage />} />
         
 
