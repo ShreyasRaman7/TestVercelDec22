@@ -23,6 +23,7 @@ import background1 from "./background1.jpg";
 import WeightedGradeCalculator from './WeightedGradeCalculator';
 import PolynomialGraph from './PolynomialGraph';
 import HistoricalEventsList from './HistoricalEventsList';
+import NutritionSearch from './NutritionSearch';
 import { HashRouter } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
@@ -62,8 +63,9 @@ function App() {
         <Route path="/Tictactoe" element={<TicTacToe />} />
         <Route path="/gradeCalculator" element={<WeightedGradeCalculator />} />
         <Route path="/graph" element={<PolynomialGraph />} />
-        {console.log("month: ",month1,"day:",day1)}
+        {/* {console.log("month: ",month1,"day:",day1)} */}
         <Route path="/historytoday" element={<HistoricalEventsList month={month1} day={day1}  />} />
+        <Route path="/nutrition" element={<NutritionSearch />} />
         <Route path="/" element={<HomePage />} />
         
 

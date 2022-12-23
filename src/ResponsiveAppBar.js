@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import HomeIcon from'@mui/icons-material/Home';
+import NutritionSearch from './NutritionSearch';
 import { Link} from "react-router-dom"
 const pages = ['SoccerHome', 'NFL', 'LiveSoccer'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -289,6 +290,25 @@ function ResponsiveAppBar() {
            HistoryToday
           </Typography>
 
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/nutrition"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              border: "2px solid white",
+              background: "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)",
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.01rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+           Nutrition
+          </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
