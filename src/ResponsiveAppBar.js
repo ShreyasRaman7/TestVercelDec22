@@ -14,6 +14,8 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import HomeIcon from'@mui/icons-material/Home';
 import NutritionSearch from './NutritionSearch';
+import ExerciseButtons from './ExerciseButtons';
+
 import { Link} from "react-router-dom"
 const pages = ['SoccerHome', 'NFL', 'LiveSoccer'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -39,7 +41,7 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl"> 
+      <Container maxWidth="100%"> 
         <Toolbar disableGutters style={{ justifyContent: 'space-between' }}>
           {/* <HomeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           {/* <IconButton sx={{ backgroundImage:"linear-gradient(to right, silver ,turquoise, gold)", color: 'purple'}} variant='outlined' href='/' aria-label="Home">
@@ -309,6 +311,27 @@ function ResponsiveAppBar() {
           >
            Nutrition
           </Typography>
+
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/muscles"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              border: "2px solid white",
+              background: "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)",
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.01rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+           Exercise
+          </Typography>
+
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton

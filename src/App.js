@@ -25,7 +25,7 @@ import PolynomialGraph from './PolynomialGraph';
 import HistoricalEventsList from './HistoricalEventsList';
 import NutritionSearch from './NutritionSearch';
 import FlashcardDeck from './FlashcardDeck';
-import MuscleGroupSelector from './MuscleGroupSelected';
+import MuscleGroupSelector from './ExerciseButtons';
 
 import { HashRouter } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
