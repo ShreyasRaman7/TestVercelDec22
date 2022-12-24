@@ -6,6 +6,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import axios from 'axios';
 
 let key1 =0
@@ -23,9 +24,9 @@ const ExerciseButtons = () => {
     forearms: 'https://i.ibb.co/HFYLDB7/forearms.jpg',
     glutes: 'https://i.ibb.co/x6xDTG3/glutes.jpg',
     hamstrings: 'https://i.ibb.co/jwznyg3/hamstrings.jpg',
-    lats: '/https://i.ibb.co/KxVhRdT/lats.jpg',
+    lats: 'https://i.ibb.co/JqHqdfs/lats2.jpg',
     neck: 'https://i.ibb.co/jG2zQpd/neck.jpg',
-    quadriceps: '/path/to/quadriceps.jpg',
+    quadriceps: 'https://i.ibb.co/kXHZwX8/Quadriceps-muscles.png',
     traps: 'https://i.ibb.co/PDjnHhh/traps.webp',
     triceps: 'https://i.ibb.co/dbpY9n9/triceps.jpg',
   };
@@ -56,9 +57,15 @@ const ExerciseButtons = () => {
 
   return (
     <div>
-      {exerciseOptions.map(exercise => (
-        <button key={exercise} onClick={() => handleButtonClick(exercise)}>{exercise}</button>
-      ))}
+      <Grid container spacing={2}>
+  {exerciseOptions.map(exercise => (
+    <Grid item key={exercise}>
+      <Button variant="contained" color="warning" onClick={() => handleButtonClick(exercise)}>
+       <h4>{exercise}</h4> 
+      </Button>
+    </Grid>
+  ))}
+</Grid>
       {Object.keys(exerciseData).length > 0 && (
         <div>
           
