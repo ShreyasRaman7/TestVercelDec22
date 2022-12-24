@@ -13,6 +13,29 @@ const ExerciseButtons = () => {
   const [exerciseData, setExerciseData] = useState({});
   const exerciseOptions = ['abductors', 'adductors', 'biceps', 'calves', 'chest', 'forearms', 'glutes', 'hamstrings', 'lats', 'neck', 'quadriceps', 'traps', 'triceps'];
 
+
+  const muscleImages = {
+    abductors: 'https://i.ibb.co/BtMCmxJ/abductors.png',
+    adductors: 'https://i.ibb.co/WkZTCnt/adductors.png',
+    biceps: 'https://i.ibb.co/2nZ0Kd9/biceps.webp',
+    calves: 'https://i.ibb.co/WkZTCnt/adductors.png',
+    chest: 'https://i.ibb.co/KhY1qy0/chest.jpg',
+    forearms: 'https://i.ibb.co/HFYLDB7/forearms.jpg',
+    glutes: 'https://i.ibb.co/x6xDTG3/glutes.jpg',
+    hamstrings: 'https://i.ibb.co/jwznyg3/hamstrings.jpg',
+    lats: '/https://i.ibb.co/KxVhRdT/lats.jpg',
+    neck: 'https://i.ibb.co/jG2zQpd/neck.jpg',
+    quadriceps: '/path/to/quadriceps.jpg',
+    traps: 'https://i.ibb.co/PDjnHhh/traps.webp',
+    triceps: 'https://i.ibb.co/dbpY9n9/triceps.jpg',
+  };
+  
+  const ExerciseImage = ({ muscle }) => {
+    const imageUrl = muscleImages[muscle];
+  
+    return <img src={imageUrl} alt={muscle} />;
+  };
+
   const handleButtonClick = muscle => {
     const options = {
       method: 'GET',
@@ -38,7 +61,12 @@ const ExerciseButtons = () => {
       ))}
       {Object.keys(exerciseData).length > 0 && (
         <div>
+          
+          {/* <img src='https://i.ibb.co/BtMCmxJ/abductors.png' alt='abductors' /> */}
           <h2>Selected Exercise: {exerciseData[0].muscle}</h2>
+          <p><ExerciseImage muscle={exerciseData[0].muscle} /></p>
+
+
            <span style={{ borderRadius:'2px', margin:'0 10px' ,outline: '.02px solid black',boxShadow:'4px 4px 8px 0px rgba(0,0,0,0.75)', color: 'black', backgroundColor: 'aliceblue' }}>Difficulty Color Code: </span> <span style={{margin:'0 10px' ,outline: '2px solid black',boxShadow:'4px 4px 8px 0px rgba(0,0,0,0.75)', color: 'black', backgroundColor: 'lightgoldenrodyellow' }}>Beginner </span> <span style={{margin:'0 10px' ,outline: '2px solid black',boxShadow:'4px 4px 8px 0px rgba(0,0,0,0.75)', color: 'black', backgroundColor: 'palegreen' }}>Intermediate </span><span style={{margin:'0 10px' ,outline: '2px solid black',boxShadow:'4px 4px 8px 0px rgba(0,0,0,0.75)', color: 'black', backgroundColor: 'lightpink' }}>Expert </span>
           <p></p>
           <Box sx={{ width: '100%',  bgcolor: 'background.paper' }}>
@@ -67,7 +95,7 @@ const ExerciseButtons = () => {
             Details
           </Button>
           <Menu {...bindMenu(popupState)}>
-            <MenuItem onClick={popupState.close}>Type:{myEvent.type}   </MenuItem>
+            <MenuItem onClick={popupState.close}>Type: <h4>{myEvent.type}</h4>   </MenuItem>
             <MenuItem onClick={popupState.close}> <>Equipment Needed: </> <h4>{myEvent.equipment}</h4> </MenuItem>
             <MenuItem onClick={popupState.close}><>Instructions: </> <div style={{ maxHeight: '200px', overflowX: 'hidden', overflowY: 'scroll' }}>
             <div style={{ maxHeight: '200px', overflowY: 'scroll' }}>
