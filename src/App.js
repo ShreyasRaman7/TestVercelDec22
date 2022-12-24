@@ -25,6 +25,7 @@ import PolynomialGraph from './PolynomialGraph';
 import HistoricalEventsList from './HistoricalEventsList';
 import NutritionSearch from './NutritionSearch';
 import FlashcardDeck from './FlashcardDeck';
+import MuscleGroupSelector from './MuscleGroupSelected';
 
 import { HashRouter } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
@@ -69,6 +70,7 @@ function App() {
         <Route path="/historytoday" element={<HistoricalEventsList month={month1} day={day1}  />} />
         <Route path="/nutrition" element={<NutritionSearch />} />
         <Route path="/FlashcardDeck" element={<FlashcardDeck />} />
+        <Route path="/muscles" element={<MuscleGroupSelector />} />
 
         <Route path="/" element={<HomePage />} />
         
