@@ -211,7 +211,7 @@ function ResponsiveAppBar() {
            TicTacToe
           </Typography>
 
-          <Typography
+          {/* <Typography
             variant="h6"
             noWrap
             component="a"
@@ -229,7 +229,7 @@ function ResponsiveAppBar() {
             }}
           >
            ChatApp
-          </Typography>
+          </Typography> */}
 
           <Typography
             variant="h6"
@@ -248,7 +248,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-           Grade Calc
+           Grades
           </Typography>
           
           

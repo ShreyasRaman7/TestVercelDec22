@@ -27,8 +27,9 @@ const LiveSoccerGameStates = () => {
   }, []);
 
   return (
+    <div><div style={{ borderRadius:'12px', background: 'radial-gradient(circle, rgba(101,228,255,1) 0%, rgba(170,247,198,0.773546918767507) 65%)',  width: '100%' }}><img width={'50%'} height={'10%'} src="https://i.postimg.cc/0y928dRV/Screenshot-at-Dec-24-14-41-58-removebg-preview.png" alt="A description of the image" /></div>
     <ul>
-      <li>This can only be used once a day due to Timeout of Api Calls,error 429</li>
+      { !gameStates && <li>No games found: due to api call timeout.</li>}
       {console.log(gameStates)}
       {Array.isArray(gameStates.events) && gameStates.events.map(gameState => (
         <li key={gameState.id}>
@@ -36,6 +37,7 @@ const LiveSoccerGameStates = () => {
         </li>
       ))}
     </ul>
+    </div>
   );
 };
 

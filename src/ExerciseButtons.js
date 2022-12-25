@@ -19,7 +19,7 @@ const ExerciseButtons = () => {
     abductors: 'https://i.ibb.co/BtMCmxJ/abductors.png',
     adductors: 'https://i.ibb.co/WkZTCnt/adductors.png',
     biceps: 'https://i.ibb.co/2nZ0Kd9/biceps.webp',
-    calves: 'https://i.ibb.co/WkZTCnt/adductors.png',
+    calves: 'https://i.ibb.co/frJbwjx/Anatomy-of-the-calf-muscles.webp',
     chest: 'https://i.ibb.co/KhY1qy0/chest.jpg',
     forearms: 'https://i.ibb.co/HFYLDB7/forearms.jpg',
     glutes: 'https://i.ibb.co/x6xDTG3/glutes.jpg',
@@ -57,9 +57,11 @@ const ExerciseButtons = () => {
 
   return (
     <div>
+                      <div style={{ borderRadius:'12px', background: 'radial-gradient(circle, rgba(43,27,57,0.9702074579831933) 65%, rgba(213,193,245,1) 10%)', height:'10%',  width: '100%' }}><img width={'50%'} height={'10%'} src="https://i.postimg.cc/gjB666N1/image.png" alt="A description of the image" /> <h3></h3></div>
+
       <Grid container spacing={2}>
   {exerciseOptions.map(exercise => (
-    <Grid item key={exercise}>
+    <Grid item  key={exercise}>
       <Button variant="contained" color="warning" onClick={() => handleButtonClick(exercise)}>
        <h4>{exercise}</h4> 
       </Button>

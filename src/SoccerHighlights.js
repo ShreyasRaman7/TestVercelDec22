@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import soccerImg  from "./soccerHighlights.png";
 
 function SoccerHighlights() {
   const [videos, setVideos] = useState([]);
@@ -24,6 +25,7 @@ function SoccerHighlights() {
 
   return (
     <div>
+      <div style={{ borderRadius:'12px', background: 'radial-gradient(circle, rgba(101,228,255,1) 0%, rgba(170,247,198,0.773546918767507) 65%)', width: '100%' }}><img src="https://i.postimg.cc/cJ3MMSC9/soccer-Highlights-removebg-preview.png" alt="A description of the image" /></div>
         
         {console.log(videos)}
       {videos.map(video => (

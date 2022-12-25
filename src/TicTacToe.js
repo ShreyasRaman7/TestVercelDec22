@@ -96,6 +96,7 @@ class TicTacToe extends React.Component {
 
     return (
       <div>
+        <h1>TicTacToe</h1>
         <div className="status">{status}</div>
         {rows}
       </div>

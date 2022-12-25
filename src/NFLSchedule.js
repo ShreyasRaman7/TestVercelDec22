@@ -35,7 +35,7 @@ function NFLSchedule() {
 
   return (
     <div  className={darkMode ? 'dark-mode' : 'light-mode'}>
-    🏈 NFL Stats for 2022:
+    <div style={{ borderRadius:'12px', background: 'radial-gradient(circle, rgba(101,228,255,1) 0%, rgba(170,247,198,0.773546918767507) 65%)',  width: '100%' }}><img width={'50%'} height={'10%'} src="https://i.postimg.cc/W1Nfpt9G/nflstats-removebg-preview.png" alt="A description of the image" /></div>
     {/* <table >
       <thead>
         <tr>

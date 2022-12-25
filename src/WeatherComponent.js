@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Grid } from '@mui/material';
 import Box from '@mui/material/Box';
+import Button from "@mui/material/Button";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -55,89 +56,20 @@ function WeatherComponent() {
       });
   };
 
-//   return (
-//     < div style={{ background: weather.temp < 20 ? blueGradient : redOrangeGradient }}>
-       
-//       <form onSubmit={handleSubmit}>
-//         <label>
-//           City:
-//           <input type="text" value={city} onChange={handleChange} />
-//         </label>
-//         <button type="submit">Get Weather</button>
-//       </form>
-//       {weather ? (
-//         <div>
-//              {console.log(weather)}
 
-//           <p>Temperature: {weather.temp}°C</p>
-//           <p>Feels Like: {weather.feels_like}°C</p>
-          
-//           <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-//       <nav aria-label="main mailbox folders">
-//         <List>
-//         <ListItem disablePadding>
-//             <ListItemButton>
-//               <ListItemIcon>
-//                 <LocationOnIcon /> { city.charAt(0).toUpperCase()+city.slice(1)}
-//               </ListItemIcon>
-//               <ListItemText primary="Location" />
-//             </ListItemButton>
-//           </ListItem>
-//           <ListItem disablePadding>
-//             <ListItemButton>
-//               <ListItemIcon>
-//                 <ThermostatIcon /> <>{weather.temp}°C</>
-//                 <>, feels Like: {weather.feels_like}°C</> , {(weather.temp * 9) / 5 + 32} °F , feels Like: {(weather.feels_like * 9) / 5 + 32} °F
-//               </ListItemIcon>
-//               <ListItemText primary="" />
-//             </ListItemButton>
-//           </ListItem>
-//           <ListItem disablePadding>
-//             <ListItemButton>
-//               <ListItemIcon>
-//                 <WbSunnyIcon />
-//               </ListItemIcon>
-//               <ListItemText primary="Sun" />
-//             </ListItemButton>
-//           </ListItem>
-//           <ListItem disablePadding>
-//             <ListItemButton>
-//               <ListItemIcon>
-//                 <AirIcon /> Windspeed: { (weather.wind_speed)} km/h , { (weather.wind_speed * 0.62).toFixed(2)} mph
-//               </ListItemIcon>
-//               <ListItemText primary="" />
-//             </ListItemButton>
-//           </ListItem>
-//           <ListItem disablePadding>
-//             <ListItemButton>
-//               <ListItemIcon>
-//                 <DraftsIcon />
-//               </ListItemIcon>
-//               <ListItemText primary="Drafts" />
-//             </ListItemButton>
-//           </ListItem>
-//         </List>
-//       </nav>
-//       <Divider />
-      
-//     </Box>
-          
-//         </div>
-//       ) : null}
-//     </>
-//   );
 
   return (
-    <div style={{ background: weather && weather.temp < 20 ? blueGradient : redOrangeGradient  }}>
+    <div style={{ height:'1000px', width:'100%',  background: weather && weather.temp < 20 ? blueGradient : redOrangeGradient  }}>
+      <div><div style={{ borderRadius:'12px', background: 'radial-gradient(circle, rgba(101,228,255,1) 0%, rgba(170,247,198,0.773546918767507) 65%)',  width: '100%' }}><img  src="https://i.postimg.cc/FskD1Jcc/Screenshot-at-Dec-24-15-15-41-removebg-preview.png" alt="A description of the image" /></div>
+     
       
-      
-      <form onSubmit={handleSubmit}>
-        <label>
-          City:
-          <input type="text" value={city} onChange={handleChange} />
-        </label>
-        <button type="submit">Get Weather</button>
-      </form>
+      <form onSubmit={handleSubmit} style={{ fontSize: '20px', padding: '20px' }}>
+      <label style={{ display: 'block', marginBottom: '10px' }}>
+        <h1 style={{ margin: 0 }}>City:</h1>
+        <input type="text" value={city} onChange={handleChange} style={{ width: '50%', fontSize: '40px' }} />
+      </label>
+      <Button  variant='contained' type="submit" style={{ fontSize: '20px', padding: '10px 20px' }}>Get Weather</Button>
+    </form>
       
         {weather && <div>
              {console.log(weather)}
@@ -190,6 +122,7 @@ function WeatherComponent() {
           
 
 
+    </div>
     </div>
   );
 

@@ -47,7 +47,20 @@ function HistoricalEventsList(props) {
 
   return (
     <div>
-    <span>Historical Events for Today: {month}/{day}</span>
+    <h1 style={{ color: 'blue', textShadow: '1px 2px 2px black' }}></h1>
+    <h1 style={{
+  color: 'black',
+  fontSize: '48px',
+  fontWeight: 'bold',
+  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)',
+  textTransform: 'uppercase'
+}}>
+        <div style={{ borderRadius:'12px', background: 'radial-gradient(circle, rgba(224,218,207,1) 0%, rgba(255,222,173,1) 100%)', height:'10%',  width: '100%' }}><img width={'50%'} height={'10%'} src="https://i.postimg.cc/K8v6J3cR/image-removebg-preview.png" alt="A description of the image" /> <h3></h3></div>
+        Historical Events for Today: {month}/{day}
+    
+  
+</h1>
+
     {/* <ul style={{padding: '10px', backgroundColor: 'darkgray', borderRadius: '5px'}}>
      {data && console.log(data) }
       {data.map((myEvent) => (

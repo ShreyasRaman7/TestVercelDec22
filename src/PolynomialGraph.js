@@ -40,6 +40,7 @@ function PolynomialGraph() {
 
   return (
     <div>
+      <h1 style={{ color: '#aaf7c6', textShadow: '1px 1px 2px gray' }}>Polynomial Graph</h1>
       <form>
         <label>
           Coefficients:

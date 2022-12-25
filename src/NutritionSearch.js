@@ -46,6 +46,9 @@ const NutritionSearch = () => {
 
   return (
     <div>
+                <div style={{ borderRadius:'12px', background: 'radial-gradient(circle, rgba(22,255,240,0.45) 0%, rgba(193,245,240,1) 100%)', height:'10%',  width: '100%' }}><img width={'50%'} height={'10%'} src="https://i.postimg.cc/MZ10rsXF/image.png" alt="A description of the image" /> <h3></h3></div>
+
+        
       <form onSubmit={handleSubmit}>
         <label>
           Query:
