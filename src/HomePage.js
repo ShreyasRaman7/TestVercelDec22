@@ -23,7 +23,7 @@ const HomePage = () => {
     };
   
     return (
-      <a href="#" onClick={handleClick}>
+      <a href="/" onClick={handleClick}>
         {email}
       </a>
     );
