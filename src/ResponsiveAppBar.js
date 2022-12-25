@@ -86,7 +86,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            ⌂HOME
+            <HomeIcon/> HOME
           </Typography>
 
 
@@ -127,7 +127,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            NFL🏈
+            🏈NFL
           </Typography>
 
           <Typography
@@ -211,7 +211,7 @@ function ResponsiveAppBar() {
            TicTacToe
           </Typography>
 
-          {/* <Typography
+          <Typography
             variant="h6"
             noWrap
             component="a"
@@ -229,7 +229,7 @@ function ResponsiveAppBar() {
             }}
           >
            ChatApp
-          </Typography> */}
+          </Typography>
 
           <Typography
             variant="h6"
