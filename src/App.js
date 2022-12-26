@@ -26,6 +26,8 @@ import HistoricalEventsList from './HistoricalEventsList';
 import NutritionSearch from './NutritionSearch';
 import FlashcardDeck from './FlashcardDeck';
 import MuscleGroupSelector from './ExerciseButtons';
+import Pokemon from "./Pokemon.js";
+import Stars from   "./Stars";
 
 import { HashRouter } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
@@ -71,6 +73,8 @@ function App() {
         <Route path="/nutrition" element={<NutritionSearch />} />
         <Route path="/FlashcardDeck" element={<FlashcardDeck />} />
         <Route path="/muscles" element={<MuscleGroupSelector />} />
+        <Route path="/pokemon" element={<Pokemon />} />
+        
 
         <Route path="/" element={<HomePage />} />
         

@@ -7,11 +7,8 @@ const SoccerTransfers = () => {
   useEffect(() => {
     const options = {
       method: 'GET',
-      url: 'https://soccer-transfers.p.rapidapi.com/en',
-      headers: {
-        'X-RapidAPI-Key': 'c45f2f9687msh24becdeb95d1334p15b4b8jsn8fb2a5cd01ce',
-        'X-RapidAPI-Host': 'soccer-transfers.p.rapidapi.com'
-      }
+      url: 'https://api.visibleplanets.dev/v3?latitude=32&longitude=-99',
+      
     };
 
     axios.request(options).then(function (response) {
@@ -26,7 +23,8 @@ const SoccerTransfers = () => {
       <h2>Soccer Transfers</h2>
       <ul>
         <li>Probably hasnt loaded yet,api issue</li>
-        {transfers && transfers.map((transfer, index) => (
+        {console.log( transfers)}
+        {transfers && transfers.data.map((transfer, index) => (
           <li key={index}>{transfer.name}</li>
         ))}
       </ul>
