@@ -15,6 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import HomeIcon from'@mui/icons-material/Home';
 import NutritionSearch from './NutritionSearch';
 import ExerciseButtons from './ExerciseButtons';
+import Pokemon from './Pokemon';
 
 import { Link} from "react-router-dom"
 const pages = ['SoccerHome', 'NFL', 'LiveSoccer'];
@@ -330,6 +331,26 @@ function ResponsiveAppBar() {
             }}
           >
            Exercise
+          </Typography>
+
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/Pokemon"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              border: "2px solid white",
+              background: "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)",
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.01rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+           Pokemon
           </Typography>
 
 

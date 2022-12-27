@@ -57,7 +57,7 @@ const ExerciseButtons = () => {
 
   return (
     <div>
-                      <div style={{ borderRadius:'12px', background: 'radial-gradient(circle, rgba(43,27,57,0.9702074579831933) 65%, rgba(213,193,245,1) 10%)', height:'10%',  width: '100%' }}><img width={'50%'} height={'10%'} src="https://i.postimg.cc/gjB666N1/image.png" alt="A description of the image" /> <h3></h3></div>
+      <div style={{ borderRadius:'12px', background: 'radial-gradient(circle, rgba(43,27,57,0.9702074579831933) 65%, rgba(213,193,245,1) 10%)', height:'10%',  width: '100%' }}><img width={'50%'} height={'10%'} src="https://i.postimg.cc/gjB666N1/image.png" alt="A description of the image" /> <h3></h3></div>
 
       <Grid container spacing={2}>
   {exerciseOptions.map(exercise => (
