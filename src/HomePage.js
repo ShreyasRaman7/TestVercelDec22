@@ -38,6 +38,7 @@ const HomePage = () => {
       <Box style={{ background: 'radial-gradient(circle, rgba(43,27,57,0.0) 35%, rgba(71,52,83,0) 100%)' }}>
 
       <MailToLink email="ramanshreyas.gm@gmail.com" />
+      <h2>My Resume: https://www.overleaf.com/read/sskkrcdyppsj</h2>
       <h4>My LinkedIn and Github:</h4>
       <a href="https://github.com/ShreyasRaman7"><img src="https://i.ibb.co/jTxFSKK/githublogo.webp" alt="19-199380-github-log-hd-png-download" alt="Github Link" border="0" height="100" width="250"/></a>
     <a href="https://www.linkedin.com/in/ramanshreyas/"><img src="https://i.ibb.co/kcvx24F/linkedin-logo.png" alt="LinkedIn Link" border="0" height="100" width="100"/></a>
