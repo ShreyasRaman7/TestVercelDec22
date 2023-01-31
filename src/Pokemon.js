@@ -41,6 +41,7 @@ function Pokemon() {
 
   return (
     <div>
+      <h4>Type in a Pokemon type, and the page will show you Pokemon of that type, and their attributes.</h4>
         <div style={{ height:'1000px', width:'100%', background: type === 'fire'
       ? 'linear-gradient(to right, red, orange)'
       : type === 'water'
