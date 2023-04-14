@@ -53,7 +53,7 @@ function ResponsiveAppBar() {
       </Button> */}
           {/* <Typogr
           {/* <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/"
@@ -71,7 +71,7 @@ function ResponsiveAppBar() {
           </Typography> */}
 
         <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/"
@@ -92,7 +92,7 @@ function ResponsiveAppBar() {
 
 
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/soccerHighlights"
@@ -112,7 +112,7 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/nfl"
@@ -132,7 +132,7 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/xg"
@@ -152,7 +152,7 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/Weather"
@@ -172,7 +172,7 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/ToDoList"
@@ -213,7 +213,7 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/Chatapp"
@@ -233,7 +233,7 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/gradecalculator"
@@ -254,7 +254,7 @@ function ResponsiveAppBar() {
           
           
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/graph"
@@ -294,7 +294,7 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/nutrition"
@@ -314,7 +314,7 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/muscles"
@@ -334,7 +334,7 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/Pokemon"
