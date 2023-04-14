@@ -193,7 +193,7 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/TicTacToe"
@@ -274,7 +274,7 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Typography
-            variant="h6"
+            variant="h8"
             noWrap
             component="a"
             href="/historytoday"
